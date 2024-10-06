@@ -1,0 +1,21 @@
+/* Estilos para o componente de Clientes */
+
+h2 {
+  color: #4a90e2; /* Azul claro */
+  text-align: center;
+}
+
+.cliente-list {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.cliente-item {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}

@@ -1,0 +1,7 @@
+<h2>Lista de Clientes</h2>
+<div class="cliente-list">
+    <div class="cliente-item" *ngFor="let cliente of clientes">
+        <p><strong>ID:</strong> {{ cliente.idCliente }}</p>
+        <p><strong>Nome:</strong> {{ cliente.endereco.endereco }}, {{ cliente.endereco.bairro }}, {{ cliente.endereco.cidade }} - {{ cliente.endereco.estado }}</p>
+    </div>
+</div>
