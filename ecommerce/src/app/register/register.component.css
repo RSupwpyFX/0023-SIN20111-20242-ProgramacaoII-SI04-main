@@ -1,0 +1,83 @@
+.container {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-blue-light-one);
+}
+
+.register-container {
+  background-color: var(--color-white);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+input[type="email"], input[type="password"] {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 12px;
+  font-size: 16px;
+  color: white;
+  background-color: var(--color-blue-light-two);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--color-blue-dark-one);
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: -15px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Espaço acima dos links */
+}
+
+.links a {
+  color: var(--color-blue-light-two); /* Cor dos links */
+  text-decoration: none; /* Remove o sublinhado */
+  font-size: 14px; /* Tamanho da fonte */
+}
+
+.links a:hover {
+  text-decoration: underline; /* Sublinha ao passar o mouse */
+}
+
+.links span {
+  margin: 0 10px; /* Espaçamento entre os links */
+}

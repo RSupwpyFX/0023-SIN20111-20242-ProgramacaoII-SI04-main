@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="accesskey-container">
+    <form class="accesskey-form" (ngSubmit)="onSubmit()" #accessKeyForm="ngForm">
+      <h2>Acesso ao Sistema</h2>
+
+      <input type="text" name="token" [(ngModel)]="token" placeholder="Digite seu token de acesso" required #tokenField="ngModel">
+      <div *ngIf="tokenField.invalid && tokenField.touched" class="error-message">Informe um token válido.</div>
+
+      <button type="submit" [disabled]="accessKeyForm.invalid">Acessar</button>
+
+      <div class="links">
+        <a href="/login">Voltar ao Login</a>
+      </div>
+    </form>
+  </div>
+</div>

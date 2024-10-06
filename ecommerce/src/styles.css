@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+}
+
+:root {
+  --color-white: #F2F2F2;
+  --color-blue-light-one: #1976D2;
+  --color-blue-light-two: #0339A6;
+  --color-blue-dark-one: #022873;
+  --color-blue-dark-two: #011640;
+  --color-burnt-yellow: #735702;
+}
