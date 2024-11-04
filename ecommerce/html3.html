@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSO Ecommerce - Detalhes e Carrinho</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Produtos</a>
+            <a href="#">Carrinho</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Produto Detalhado</h1>
+
+        <!-- Cartão de Produto Detalhado -->
+        <div class="product-card">
+            <img src="produto-detalhado.jpg" alt="Produto Detalhado">
+            <div class="product-card-details">
+                <h3>Produto 1 Detalhado</h3>
+                <p>Descrição completa do produto com todas as suas funcionalidades e especificações.</p>
+                <p class="price">R$ 199,90</p>
+                <button>Adicionar ao Carrinho</button>
+            </div>
+        </div>
+
+        <h2>Cadastro de Cliente</h2>
+
+        <!-- Formulário de Cadastro -->
+        <form action="#">
+            <input type="text" name="nome" placeholder="Nome Completo" class="success">
+            <input type="email" name="email" placeholder="Email" class="error">
+            <div class="form-error-msg">Email inválido</div>
+            <input type="password" name="senha" placeholder="Senha">
+            <textarea name="endereco" placeholder="Endereço Completo"></textarea>
+            <button type="submit" class="submit">Cadastrar</button>
+        </form>
+
+        <h2>Seu Carrinho</h2>
+
+        <!-- Carrinho de Compras -->
+        <div class="cart">
+            <div class="cart-header">Carrinho de Compras</div>
+
+            <div class="cart-items">
+                <div class="cart-item">
+                    <img src="produto1.jpg" alt="Produto 1">
+                    <div class="cart-item-details">
+                        <h4>Produto 1</h4>
+                        <p>R$ 199,90</p>
+                    </div>
+                    <button class="remove-btn">Remover</button>
+                </div>
+
+                <div class="cart-item">
+                    <img src="produto2.jpg" alt="Produto 2">
+                    <div class="cart-item-details">
+                        <h4>Produto 2</h4>
+                        <p>R$ 99,90</p>
+                    </div>
+                    <button class="remove-btn">Remover</button>
+                </div>
+            </div>
+
+            <div class="cart-total">Total: R$ 299,80</div>
+        </div>
+
+        <!-- Alerta de Sucesso -->
+        <div class="alert success">Produto adicionado ao carrinho com sucesso!</div>
+
+        <!-- Alerta de Erro -->
+        <div class="alert error">Erro ao adicionar o produto ao carrinho.</div>
+
+        <!-- Alerta de Informação -->
+        <div class="alert info">Este produto está em promoção!</div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        &copy; 2024 - Sistema de Vendas Online. Todos os direitos reservados.
+    </footer>
+
+</body>
+</html>

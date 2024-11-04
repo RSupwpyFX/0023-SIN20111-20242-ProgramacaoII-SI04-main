@@ -4,13 +4,28 @@ import { ClienteComponent } from './cliente/cliente.component';
 import { NotificationComponent } from './notification/notification.component';
 import { RegisterComponent } from './register/register.component';
 import { AccessKeyComponent } from './accesskey/accesskey.component';
+import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { CadastroFuncionarioComponent } from './cadastro-funcionario/cadastro-funcionario.component';
+import { ProdutoListaComponent } from './produto-lista/produto-lista.component';
+import { ProdutoDetalheComponent } from './produto-detalhe/produto-detalhe.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { HomeComponent } from './home/home.component';
+import { MovimentacaoComponent } from './movimentacao/movimentacao.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: LoginComponent },
   { path: 'accesskey', component: AccessKeyComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'notification', component: NotificationComponent },
   { path: 'cliente', component: ClienteComponent },
+  { path: 'cadastro-usuario', component: CadastroUsuarioComponent },
+  { path: 'cadastro-funcionario', component: CadastroFuncionarioComponent },
+  { path: 'produto-lista', component: ProdutoListaComponent },
+  { path: 'produto-detalhe/:nome', component: ProdutoDetalheComponent },
+  { path: 'navbar', component: NavbarComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'carrinho', component: CarrinhoComponent },
+  { path: 'movimentacao', component: MovimentacaoComponent },
 ];

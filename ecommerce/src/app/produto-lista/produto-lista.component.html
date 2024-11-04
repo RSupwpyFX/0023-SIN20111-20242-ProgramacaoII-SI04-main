@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="product-list">
+    <div class="product-item" *ngFor="let produto of produtos">
+      <div class="image" [ngStyle]="{'background-image': 'url(' + produto.imagens[0] + ')'}"></div>
+      <h3>{{ produto.nome }}</h3>
+      <p>{{ produto.preco | currency:'BRL' }}</p>
+      <button class="button-transparent" [routerLink]="['/produto-detalhe', produto.nome]">Detalhes do Produto</button>
+      <button class="button" (click)="adicionarAoCarrinho(produto)">Adicionar ao Carrinho</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,88 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: var(--color-white);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand a {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--color-blue-light-one);
+  text-decoration: none;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-menu li {
+  position: relative;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #333;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.navbar-menu li a:hover {
+  color: var(--color-blue-light-two);
+}
+
+.navbar-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  background-color: var(--color-white);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+  background-color: var(--color-blue-light-two);
+  color: var(--color-white);
+}
+
+.cart-icon {
+  background-image: url('../../assets/cart-icon.png'); /* Caminho do ícone do carrinho */
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  background-size: contain;
+}
+
+.cart-count {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  position: relative;
+  top: -10px;
+  left: -10px;
+}

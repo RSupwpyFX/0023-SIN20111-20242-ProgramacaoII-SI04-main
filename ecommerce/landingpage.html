@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSO Ecommerce - Catálogo de Componentes</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+
+    <!-- Cabeçalho com Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>DSO Ecommerce</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#headings-paragraphs">Títulos e Parágrafos</a></li>
+                <li><a href="#inputs-buttons">Inputs e Botões</a></li>
+                <li><a href="#alerts-feedback">Alertas</a></li>
+                <li><a href="#product-card">Produtos</a></li>
+                <li><a href="#customer-form">Cadastro</a></li>
+                <li><a href="#cart">Carrinho</a></li>
+            </ul>
+            <div class="nav-btns">
+                <button class="login-btn">Login</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <div class="container">
+
+        <!-- Títulos e Parágrafos -->
+        <section id="headings-paragraphs">
+            <h2>Estilos de Títulos e Parágrafos</h2>
+            <h1>Este é um H1</h1>
+            <h2>Este é um H2</h2>
+            <h3>Este é um H3</h3>
+            <h4>Este é um H4</h4>
+            <h5>Este é um H5</h5>
+            <p>Este é um parágrafo. Use este estilo para blocos de texto padrão em seu site.</p>
+        </section>
+
+        <!-- Inputs e Botões -->
+        <section id="inputs-buttons">
+            <h2>Inputs e Botões</h2>
+            <form>
+                <input type="text" placeholder="Texto comum">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Senha">
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <!-- Alertas e Mensagens de Feedback -->
+        <section id="alerts-feedback">
+            <h2>Alertas e Mensagens de Feedback</h2>
+            <div class="alert success">Este é um alerta de sucesso!</div>
+            <div class="alert error">Este é um alerta de erro!</div>
+            <div class="alert info">Este é um alerta informativo!</div>
+        </section>
+
+        <!-- Cartão de Produto Detalhado -->
+        <section id="product-card">
+            <h2>Cartão de Produto Detalhado</h2>
+            <div class="product-card">
+                <img src="produto-detalhado.jpg" alt="Produto Detalhado">
+                <div class="product-card-details">
+                    <h3>Produto 1 Detalhado</h3>
+                    <p>Descrição completa do produto com todas as suas funcionalidades e especificações.</p>
+                    <p class="price">R$ 199,90</p>
+                    <button>Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulário de Cadastro de Cliente -->
+        <section id="customer-form">
+            <h2>Formulário de Cadastro de Cliente</h2>
+            <form action="#">
+                <input type="text" name="nome" placeholder="Nome Completo">
+                <input type="email" name="email" placeholder="Email">
+                <input type="password" name="senha" placeholder="Senha">
+                <textarea name="endereco" placeholder="Endereço Completo"></textarea>
+                <button type="submit" class="submit">Cadastrar</button>
+            </form>
+        </section>
+
+        <!-- Carrinho de Compras -->
+        <section id="cart">
+            <h2>Carrinho de Compras</h2>
+            <div class="cart">
+                <div class="cart-header">Carrinho de Compras</div>
+
+                <div class="cart-items">
+                    <div class="cart-item">
+                        <img src="produto1.jpg" alt="Produto 1">
+                        <div class="cart-item-details">
+                            <h4>Produto 1</h4>
+                            <p>R$ 199,90</p>
+                        </div>
+                        <button class="remove-btn">Remover</button>
+                    </div>
+
+                    <div class="cart-item">
+                        <img src="produto2.jpg" alt="Produto 2">
+                        <div class="cart-item-details">
+                            <h4>Produto 2</h4>
+                            <p>R$ 99,90</p>
+                        </div>
+                        <button class="remove-btn">Remover</button>
+                    </div>
+                </div>
+
+                <div class="cart-total">Total: R$ 299,80</div>
+            </div>
+        </section>
+
+        <!-- Tela de Login -->
+        <div class="login-container">
+            <h2>Login</h2>
+            <form>
+                <input type="text" placeholder="Usuário" required>
+                <input type="password" placeholder="Senha" required>
+                <button type="submit" class="submit">Entrar</button>
+            </form>
+            <p>Não tem uma conta? <a href="#">Cadastre-se</a></p>
+        </div>
+
+        <!-- Tela de Registro -->
+        <div class="register-container">
+            <h2>Registrar</h2>
+            <form>
+                <input type="text" placeholder="Nome Completo" required>
+                <input type="text" placeholder="Usuário" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Senha" required>
+                <input type="password" placeholder="Confirme a Senha" required>
+                <button type="submit" class="submit">Registrar</button>
+            </form>
+            <p>Já tem uma conta? <a href="#">Faça login</a></p>
+        </div>
+
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 - Sistema de Vendas Online. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

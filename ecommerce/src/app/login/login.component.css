@@ -30,13 +30,25 @@ h2 {
   color: #333;
 }
 
+h2 span {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--color-blue-light-one);
+  text-decoration: none;
+}
+
 input[type="email"], input[type="password"] {
-  padding: 12px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
   width: 100%;
-  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #3366cc;
+  outline: none;
 }
 
 button {
@@ -65,19 +77,19 @@ button:hover {
 .links {
   display: flex;
   justify-content: center;
-  margin-top: 20px; /* Espaço acima dos links */
+  margin-top: 20px;
 }
 
 .links a {
-  color: var(--color-blue-light-two); /* Cor dos links */
-  text-decoration: none; /* Remove o sublinhado */
-  font-size: 14px; /* Tamanho da fonte */
+  color: var(--color-blue-light-two);
+  text-decoration: none;
+  font-size: 14px;
 }
 
 .links a:hover {
-  text-decoration: underline; /* Sublinha ao passar o mouse */
+  text-decoration: underline;
 }
 
 .links span {
-  margin: 0 10px; /* Espaçamento entre os links */
+  margin: 0 10px;
 }

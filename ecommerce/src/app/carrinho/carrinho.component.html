@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="card">
+    <h2>Seu Carrinho de Compras</h2>
+
+    <div *ngIf="produtos.length === 0">
+      <p>Seu carrinho está vazio.</p>
+    </div>
+
+    <div *ngIf="produtos.length > 0" class="cart-list">
+      <div class="cart-item" *ngFor="let produto of produtos; let i = index">
+        <div class="image" [ngStyle]="{'background-image': 'url(' + produto.imagens[0] + ')'}"></div>
+        <div class="details">
+          <h3>{{ produto.nome }}</h3>
+          <p>{{ produto.preco | currency:'BRL' }}</p>
+          <label for="quantidade">Quantidade:</label>
+          <input type="number" [(ngModel)]="produto.quantidade" min="1">
+          <button (click)="removerDoCarrinho(i)">Remover</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="total-container">
+      <h3>Total: {{ calcularTotal() | currency:'BRL' }}</h3>
+    </div>
+
+    <div class="button-container">
+      <button (click)="finalizarCompra()">Finalizar Compra</button>
+      <button (click)="cancelarCompra()">Cancelar</button>
+    </div>
+  </div>
+</div>

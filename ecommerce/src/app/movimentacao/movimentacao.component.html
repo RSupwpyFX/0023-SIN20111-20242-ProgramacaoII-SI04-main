@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="card">
+    <h2>Movimentação Financeira</h2>
+
+    <!-- Filtros -->
+    <form class="form" (ngSubmit)="onFilter()" #filterForm="ngForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="dataInicio">Data Início</label>
+          <input type="date" id="dataInicio" [(ngModel)]="dataInicio" name="dataInicio" />
+        </div>
+        <div class="form-group">
+          <label for="dataFim">Data Fim</label>
+          <input type="date" id="dataFim" [(ngModel)]="dataFim" name="dataFim" />
+        </div>
+        <div class="form-group">
+          <label for="tipoMovimentacao">Tipo Movimentação</label>
+          <select id="tipoMovimentacao" [(ngModel)]="tipoMovimentacao" name="tipoMovimentacao">
+            <option value="">Selecione</option>
+            <option value="entrada">Entrada</option>
+            <option value="saida">Saída</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group button-container">
+        <button type="submit" class="button-submit margin-right">Filtrar</button>
+        <button (click)="gerarPDF()" class="button-submit">Gerar Relatório PDF</button>
+      </div>
+    </form>
+
+    <!-- Grid com os resultados filtrados -->
+    <div class="grid">
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Descrição</th>
+            <th>Valor</th>
+            <th>Tipo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of movimentacoes">
+            <td>{{ item.data }}</td>
+            <td>{{ item.descricao }}</td>
+            <td>{{ item.valor | currency:'BRL' }}</td>
+            <td>{{ item.tipo }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

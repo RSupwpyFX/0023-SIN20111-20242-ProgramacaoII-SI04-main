@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css"> <!-- Link para seu CSS -->
+    <title>Login</title>
+</head>
+
+<body>
+    <!-- Cabeçalho com Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>DSO Ecommerce</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#headings-paragraphs">Títulos e Parágrafos</a></li>
+                <li><a href="#inputs-buttons">Inputs e Botões</a></li>
+                <li><a href="#alerts-feedback">Alertas</a></li>
+                <li><a href="#product-card">Produtos</a></li>
+                <li><a href="#customer-form">Cadastro</a></li>
+                <li><a href="#cart">Carrinho</a></li>
+            </ul>
+            <div class="nav-btns">
+                <button class="login-btn">Login</button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Nome de usuário" required>
+            <input type="password" id="password" placeholder="Senha" required>
+            <button type="submit" class="submit">Entrar</button>
+        </form>
+        <div class="form-error-msg" id="errorMsg" style="display:none;"></div>
+    </div>
+
+    <!-- Rodapé
+    <footer>
+        <p>&copy; 2024 - Sistema de Vendas Online. Todos os direitos reservados.</p>
+    </footer> -->
+
+    <script src="script.js"></script> <!-- Link para seu JavaScript -->
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<nav class="navbar" *ngIf="isVisible">
+  <div class="navbar-brand">
+    <a>RDEV</a>
+  </div>
+  <ul class="navbar-menu">
+    <li class="navbar-dropdown">
+      <a>Cadastro</a>
+      <ul class="dropdown-menu">
+        <li><a routerLink="cadastro-usuario">Usuário</a></li>
+        <li><a routerLink="cadastro-funcionario">Funcionário</a></li>
+      </ul>
+    </li>
+    <li class="navbar-dropdown">
+      <a href="">Relatório</a>
+      <ul class="dropdown-menu">
+        <li><a href="">Usuário</a></li>
+        <li><a href="">Funcionário</a></li>
+      </ul>
+    </li>
+    <li><a routerLink="produto-lista">Produto</a></li>
+    <li class="navbar-dropdown">
+      <a href="">Financeiro</a>
+      <ul class="dropdown-menu">
+        <li><a routerLink="movimentacao">Movimentações</a></li>
+      </ul>
+    </li>
+    <li><a href="" (click)="logout()">Disconnect</a></li>
+    <li>
+      <a routerLink="carrinho">
+        <i class="cart-icon"></i>
+        <span class="cart-count">{{ cartItemCount }}</span>
+      </a>
+    </li>
+  </ul>
+</nav>

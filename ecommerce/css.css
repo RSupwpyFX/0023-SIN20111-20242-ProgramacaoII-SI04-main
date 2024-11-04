@@ -1,0 +1,598 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilo básico para navegadores que suportam ::-webkit-scrollbar */
+::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+}
+
+/* Parte de fundo da barra de rolagem */
+::-webkit-scrollbar-track {
+    background-color: #f4f4f4; /* Cor do fundo da barra */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Barra de rolagem */
+::-webkit-scrollbar-thumb {
+    background-color: #8416F2; /* Cor da barra */
+    border-radius: 10px; /* Bordas arredondadas */
+    border: 3px solid #f4f4f4; /* Espaço em volta da barra */
+}
+
+/* Ao passar o mouse sobre a barra de rolagem */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #522073; /* Cor da barra ao passar o mouse */
+}
+
+/* Para navegadores que suportam scrollbar do Firefox */
+body {
+    scrollbar-color: #8416F2 #f4f4f4; /* Cor da barra de rolagem e do fundo */
+    scrollbar-width: thin; /* Largura fina da barra de rolagem */
+}
+
+/* Container principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4; /* Fundo claro para destacar os elementos */
+}
+
+/* Estilização dos Títulos */
+h1, h2, h3, h4, h5, h6 {
+    color: #522073; /* Roxo principal */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Tamanho dos títulos */
+h1 { font-size: 36px; }
+h2 { font-size: 30px; }
+h3 { font-size: 26px; }
+h4 { font-size: 22px; }
+h5 { font-size: 18px; }
+h6 { font-size: 16px; }
+
+/* Estilização dos Parágrafos */
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333; /* Texto escuro */
+    margin-bottom: 15px;
+}
+
+/* Estilização dos Inputs */
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #d0d0d0;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #8416F2; /* Roxo mais vibrante ao focar */
+    outline: none;
+}
+
+/* Estilização dos Botões */
+button {
+    background-color: #8416F2; /* Roxo vibrante */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #522073; /* Escurece ao passar o mouse */
+}
+
+/* Adicionando um estilo de container card */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Botão Secundário */
+button.secondary {
+    background-color: #d0d0d0;
+    color: #333;
+}
+
+button.secondary:hover {
+    background-color: #c0c0c0;
+}
+
+/* Botão com ícone (antes do texto) */
+button.icon-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+button.icon-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #d0d0d0;
+}
+
+table th {
+    background-color: #8416F2; /* Roxo vibrante */
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Lista de Produtos (Grade) */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.product-item {
+    background-color: #fff;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+.product-item img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.product-item h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product-item p {
+    color: #8416F2;
+    font-weight: bold;
+}
+
+.product-item button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #8416F2;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+    background-color: #522073;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Alertas e Mensagens de Feedback */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.alert.success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.alert.error {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+.alert.info {
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+    color: #0c5460;
+}
+
+/* Cartões de Produto Detalhado */
+.product-card {
+    display: flex;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.product-card img {
+    max-width: 200px;
+    border-right: 1px solid #d0d0d0;
+}
+
+.product-card-details {
+    padding: 20px;
+    flex: 1;
+}
+
+.product-card-details h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.product-card-details p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.product-card-details .price {
+    color: #8416F2;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.product-card-details button {
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* Formulários */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+input, select, textarea {
+    padding: 10px;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #8416F2;
+}
+
+button.submit {
+    background-color: #8416F2;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.submit:hover {
+    background-color: #6b12c1;
+}
+
+/* Estilização de mensagens de validação */
+input.error {
+    border-color: #f5c6cb;
+    background-color: #f8d7da;
+}
+
+input.success {
+    border-color: #c3e6cb;
+    background-color: #d4edda;
+}
+
+.form-error-msg {
+    color: #721c24;
+    font-size: 14px;
+    margin-top: -10px;
+}
+
+/* Carrinho de Compras */
+.cart {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cart-header {
+    background-color: #8416F2;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.cart-items {
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #d0d0d0;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item img {
+    max-width: 80px;
+    border-radius: 5px;
+}
+
+.cart-item-details {
+    flex: 1;
+    padding: 0 15px;
+}
+
+.cart-item-details h4 {
+    margin-bottom: 5px;
+}
+
+.cart-item-details p {
+    margin-bottom: 10px;
+    color: #8416F2;
+}
+
+.cart-item button.remove-btn {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-item button.remove-btn:hover {
+    background-color: #f5c6cb;
+}
+
+.cart-total {
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Estilo geral do cabeçalho */
+header {
+    background-color: #8416F2;
+    padding: 10px 20px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo */
+.logo h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Links de navegação */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #d0d0d0; /* Efeito hover nos links */
+}
+
+/* Botões de navegação (Login, etc) */
+.nav-btns {
+    display: flex;
+    gap: 10px;
+}
+
+.login-btn {
+    background-color: #f4f4f4;
+    color: #8416F2;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: #d0d0d0;
+}
+
+/* Efeito sticky para fixar o cabeçalho no topo */
+header.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* Estilo da Tela de Login */
+.login-container {
+    max-width: 400px;
+    margin: 50px auto; /* Centraliza verticalmente e horizontalmente */
+    padding: 20px;
+    background-color: #ffffff; /* Fundo branco para o formulário */
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+    text-align: center;
+    color: #522073; /* Cor do título */
+    margin-bottom: 20px;
+}
+
+.login-container input {
+    padding: 10px;
+    border: 2px solid #d0d0d0;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    width: 100%; /* Largura total */
+}
+
+.login-container input:focus {
+    border-color: #8416F2; /* Roxo mais vibrante ao focar */
+    outline: none;
+}
+
+.login-container button.submit {
+    width: 100%; /* Largura total */
+    background-color: #8416F2; /* Cor do botão */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-container button.submit:hover {
+    background-color: #522073; /* Escurece ao passar o mouse */
+}
+
+.login-container p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-container a {
+    color: #8416F2; /* Cor do link */
+    text-decoration: none;
+}
+
+.login-container a:hover {
+    text-decoration: underline; /* Sublinhado ao passar o mouse */
+}
+
+/* Estilo da Tela de Registro */
+.register-container {
+    max-width: 400px;
+    margin: 50px auto; /* Centraliza verticalmente e horizontalmente */
+    padding: 20px;
+    background-color: #ffffff; /* Fundo branco para o formulário */
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.register-container h2 {
+    text-align: center;
+    color: #522073; /* Cor do título */
+    margin-bottom: 20px;
+}
+
+.register-container input {
+    padding: 10px;
+    border: 2px solid #d0d0d0;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    width: 100%; /* Largura total */
+}
+
+.register-container input:focus {
+    border-color: #8416F2; /* Roxo mais vibrante ao focar */
+    outline: none;
+}
+
+.register-container button.submit {
+    width: 100%; /* Largura total */
+    background-color: #8416F2; /* Cor do botão */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.register-container button.submit:hover {
+    background-color: #522073; /* Escurece ao passar o mouse */
+}
+
+.register-container p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.register-container a {
+    color: #8416F2; /* Cor do link */
+    text-decoration: none;
+}
+
+.register-container a:hover {
+    text-decoration: underline; /* Sublinhado ao passar o mouse */
+}

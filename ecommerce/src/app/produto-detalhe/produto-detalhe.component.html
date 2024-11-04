@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="card">
+    <div class="form-row">
+      <div class="form-group carrossel">
+        <div class="imagem-carrossel" [ngStyle]="{'background-image': 'url(' + imagemPrincipal + ')'}"></div>
+        <div class="preview-container">
+          <div class="preview-image" *ngFor="let img of imagens">
+            <div class="imagem-preview" [ngStyle]="{'background-image': 'url(' + img + ')'}"></div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group detalhes">
+        <h2>{{ nome }}</h2>
+        <p>{{ descricao }}</p>
+
+        <button (click)="toggleInfo()" class="toggle-info">
+          {{ showInfo ? '▲' : '▼' }} Informações Técnicas
+        </button>
+        <div [ngClass]="{'informacoes-tecnicas': true, 'active': showInfo}">
+          <p><strong>Material:</strong> {{ material }}</p>
+          <p><strong>Dimensões:</strong> {{ dimensoes }}</p>
+          <p><strong>Instruções de Lavagem:</strong> {{ instrucoesLavagem }}</p>
+        </div>
+
+        <div class="cep-container">
+          <label for="cep">CEP:</label>
+          <input type="text" id="cep" [(ngModel)]="cep" placeholder="Digite seu CEP" />
+          <button (click)="calcularFrete()" class="button-submit">Calcular Frete</button>
+        </div>
+
+        <div class="button-container">
+          <div class="quantidade-container">
+            <label for="quantidade">QTD:</label>
+            <input type="number" id="quantidade" [(ngModel)]="quantidade" min="1" />
+          </div>
+          <button (click)="adicionarAoCarrinho()" class="button-submit">Adicionar ao Carrinho</button>
+          <button (click)="comprar()" class="button-submit">Comprar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
